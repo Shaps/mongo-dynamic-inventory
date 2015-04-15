@@ -42,7 +42,6 @@ parser.add_argument('--host', metavar='Hostname', nargs=1, help='The hostname to
 parser.add_argument('-H', action="store_true", help="Human readable format")
 args = parser.parse_args()
 
-# mongoclient = MongoClient("tc-lv-ans-01:27017,ns-lv-ans-01:27017,thw-lv-ans-01:27017", replicaSet="rs_inv", readPreference="primaryPreferred")
 mongoclient = MongoClient(MONGO_HOST, MONGO_PORT)
 db = mongoclient.spot
 json_docs = dict()
